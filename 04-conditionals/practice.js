@@ -12,7 +12,14 @@
 //
 //     passwordStrength("helloone");
 //     //=> medium
-var passwordStrength = function () {
+var passwordStrength = function (password) {
+    if (password.length >= 10){
+    return "strong";
+    }else if(password.length >=7 && password.length < 10){
+    return "medium";
+    }else{
+    return "weak";
+    }
 };
 
 
@@ -37,7 +44,16 @@ var passwordStrength = function () {
 //
 //      isLeapYear("hello");
 //      //=> THAT'S NOT A NUMBER!
-var isLeapYear = function () {
+var isLeapYear = function (year) {
+    if(typeof(year) === "number"){
+    if(year/4 === Math.round(year/4)){
+  return true
+    }else{
+        return false
+    }
+    }else{
+        throw "THAT'S NOT A NUMBER!";
+}
 };
 
 
@@ -57,7 +73,12 @@ var isLeapYear = function () {
 //
 //      firstInDictionary("whale", 5, 10);
 //      //=> ALL THREE ARGS MUST BE STRINGS!
-var firstInDictionary = function () {
+var firstInDictionary = function (a,b,c) {
+    if(a !== "string" || b!== "string" || c!== "string"){
+    throw "THATS NOT A STRING!";
+    }else{
+     return Math.max(a,b,c);   
+    }
 };
 
 

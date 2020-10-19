@@ -17,7 +17,14 @@
 //    isVowel("Y");
 //    //=> false
 //
-var isVowel = function () {
+var isVowel = function (x) {
+    if(typeof(x) !== "string" || x.length !== 1){
+     throw "you absolute moron";   
+    }
+    if(x === "a" || x === "e" || x === "i"|| x === "o"|| x === " u"){
+     return "true";   
+    }
+    return "false";
 };
 
 
@@ -39,9 +46,15 @@ var isVowel = function () {
 //    isLowerCaseLetter(true);
 //    //=> false
 //
-var isLowerCaseLetter = function () {
+var isLowerCaseLetter = function (x) {
+var index;
+    if ("a"<= x.charAt(index) && x.charAt(index) <= "z"){
+return true;
+}else{
+    
+    return false;
+}
 };
-
 
 // Write a function called `sumUpTo` so that it accepts a positive number `n`
 // and sums the first `n` positive integers. For example, if you call `sumUpTo(5)`
@@ -59,7 +72,13 @@ var isLowerCaseLetter = function () {
 //     sumUpTo(-10);
 //     //=> input must be a zero or a positive number!
 //
-var sumUpTo = function () {
+var sumUpTo = function (y) {
+   var count;
+   var result = 0;
+    for(count = 1; count <= y; count + 1){
+        result = result + count;
+    }
+return result;
 };
 
 
